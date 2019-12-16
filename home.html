@@ -1,1 +1,44 @@
-Hello World
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Link D. Potter</title>
+        <meta property = "og:image" content="images/ShingekiNoKyojin.png">
+        <meta name = "description" content="My website">
+        <link rel="icon" href="images/ShingekiNoKyojin.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    </head>
+    <body style="background-color: #36393f;">
+        <header>
+            <a href="home.html">
+                <img class="gif" src="images/LinkDPotter.gif" alt="Link D. Potter">            
+            </a>
+            <nav>
+                <ul>
+                    <li><a class="navbar-link active" href="home.html">Home</a></li>
+                    <li><a class="navbar-link" href="categories/scratch.html">Scratch</a></li>
+                    <li class="deroulant"><a class="navbar-link">&Stunning</a>
+                        <ul class="sous">
+                            <li><a href="categories/&Stunning/dashboard.html">Dashboard</a></li>
+                            <li><a href="categories/&Stunning/commands.html">Commandes</a></li>
+                            <li><a href="https://discordapp.com/oauth2/authorize?client_id=555820642251833386&scope=bot&permissions=268449854">Invite-moi</a></li>
+                            <li><a href="https://discord.gg/FK9KE9h">Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navbar-link" href="categories/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2><img alt="wave" src="https://discordapp.com/assets/df7ba0f4020ca70048a0226d1dfa73f6.svg" height="35" width="35">Bienvenue</h2>
+        <img class="slide" alt="welcome" src="http://www.briantina.it/webdisk/articles/img-art-2689-TAP03856A.jpg" height="auto" width="50%">
+        <a class="up-arrow" onclick="changeSlide(-1, true)">🔼</a>
+        <a class="down-arrow" onclick="changeSlide(1, true)">🔽</a>
+        <script src="main.js"></script>
+        <script>
+            var interval = window.setInterval(() => {
+                if (!onClick) changeSlide(1);
+                else onClick = false;
+            }, 4000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+body {
+    font-family: BlinkMacSystemFont,helvetica,arial,sans-serif;    
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+nav {
+    padding-top: 1px;
+    background-color: rgb(12, 12, 12);
+    margin: 0px -8px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+}
+
+nav a {
+    padding-left: 12px;
+    font-size: 37px;
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+    font-family: system-ui;
+    transition: padding 0.3s ease-out;
+}
+
+.navbar-link:hover {
+    padding: 25px;
+}
+
+nav a.active {
+    color: rgb(77, 75, 75);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sous {
+    user-select: none;
+    display: none;
+    position: absolute;
+    background-color: rgb(12, 12, 12);
+    padding-left: 45px;
+    padding-right: 10px;
+}
+
+.deroulant:hover .sous {
+    display: block;
+}
+
+.sous li a {
+    float: none;
+    text-align: left;
+    margin-left: -45px;
+    font-size: 30px;
+}
+
+.sous li a:hover {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+h2 {
+    font-size: 45px;
+    font-family: cursive;
+    font-weight: normal;
+    text-decoration: underline;
+    color: rgb(236, 235, 235);
+    margin-left: 40%;
+}
+
+img.slide {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.up-arrow, .down-arrow {
+    background-color: rgb(77, 75, 75, 0.7);
+    font-size: 50px;
+    position: absolute;
+    margin-left: -53.5%;
+    transition: background-color 0.2s ease-out;
+}
+
+.up-arrow:hover, .down-arrow:hover {
+    background-color: rgb(77, 75, 75, 0.2);
+}
+
+.down-arrow {
+    margin-top: 23.9%;
+}
+
+p {
+    font-size: 25px;
+    font-family: cursive;
+    color: #202224;
+}
+
+.scratch-project {
+    background-color: rgba(62, 67, 75, 0.75);
+    padding-bottom: 20px;
+    margin-right: calc(40% - 575px);
+    margin-bottom: -50px;
+    margin-left: calc(60% - 575px);
+    width: 575px;
+}
+
+.scratch-project-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #575e75;
+    margin-left: 25px;
+    background-color: rgba(196, 216, 245, 0.1);
+}
+
+a {
+    text-decoration: none;
+    color: #202224
+}
+
+.framed {
+    margin-top: -10px;
+    margin-left: 500px;
+}
+
+.framed, .framed .button {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    color: #495685;
+    background-color: transparent;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-color: #495685;
+    line-height: normal;
+    text-align: center;
+    padding: 25px 46px;
+    font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border-radius: 5px;    
+}
+
+.framed .button {
+    transition: 0.25s background-color linear, 0.3s color linear;
+    text-transform: uppercase;
+    margin-left: 0px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.framed .button:hover {
+    color: #202224;
+    background-color: #495685;
+}
+
+.bot-picture {
+    display: block;
+    margin-left: 150px;
+}
+
+.dbl-frame {
+    margin-left: 525px;
+    margin-top: 50px;
+}
+
+.secodary-title {
+    color: rgb(13, 17, 22);
+    text-align: center;
+    margin-left: -100px;
+    font-size: 45px;
+    font-family: Verdana, sans-serif;
+    text-decoration: underline;
+}
+
+.commands-category {
+    margin-left: 12%;
+    width: 69%;
+    justify-content: center;
+    border-bottom-color: #c7c2c2be;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: flex;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.commands-category li {
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.commands-category li a {
+    color: rgba(97, 95, 95, 0.87);
+    font-size: 30px;
+    font-family: BlinkMacSystemFont,helvetica,arial,sans-serif;
+    transition: all 0.2s ease-out;
+}
+
+.commands-category li a:hover {
+    color: rgba(76, 98, 151, 0.87);
+    padding-right: 18px;
+    padding-left: 10px;
+}
+
+.commands-category li a.active {
+    color: rgba(3, 3, 5);
+}
+
+table {
+    margin-left: 15%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 66.6666%;
+    margin-bottom: 5%;
+}
+
+table td, th{
+    border: 2px solid rgba(88, 108, 139, 0.918);
+    text-align: left;
+    padding: .5em .75em;
+}
+
+table td {
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+table tbody {
+    display: none;
+}
+
+table tbody.active {
+    display: table-row-group;
+}
+
+code {
+    background-color: #7979794a;
+    font-size: 0.875em;
+    font-weight: normal;
+    padding: 0.25em 0.5em 0.25em;
+    color: #e3e2e2;
+}
+
+.deroulant {
+    cursor: pointer;
+}
+
+.gif {
+    width: 64%;
+    margin-left: 18%;
+    height: auto;
+}

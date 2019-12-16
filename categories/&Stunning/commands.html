@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Link D. Potter</title>
+        <meta property = "og:image" content="../images/ShingekiNoKyojin.png">
+        <meta name = "description" content="My website">
+        <link rel="icon" href="../../images/ShingekiNoKyojin.png">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../main.css">
+    </head>
+    <body style="background-color: #36393f;">
+        <header>
+            <a href="../../home.html">
+                <img src="../../images/LinkDPotter.gif" alt="Link D. Potter" height="200px" width="auto" style="margin-left: 270px;">            
+            </a>
+            <nav>
+                <ul>
+                    <li><a class="navbar-link" href="../../home.html">Home</a></li>
+                    <li><a class="navbar-link" href="../scratch.html">Scratch</a></li>
+                    <li class="deroulant"><a class="active navbar-link">&Stunning</a>
+                        <ul class="sous">
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                            <li><a href="commands.html">Commandes</a></li>
+                            <li><a href="https://discordapp.com/oauth2/authorize?client_id=555820642251833386&scope=bot&permissions=268449854">Invite-moi</a></li>
+                            <li><a href="https://discord.gg/FK9KE9h">Support</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="navbar-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <p class="secodary-title">Listes des commandes:</p>   
+
+        <!--Navbar category-->
+        <ul class="commands-category">
+            <li id="Mod"><a class="active" onclick="changeCategory('Mod')">Modération</a></li>
+            <li id="Role"><a onclick="changeCategory('Role')">Gestion des rôles</a></li>
+            <li id="Serv"><a onclick="changeCategory('Serv')">Gestion du serveur</a></li>
+            <li id="Fun"><a onclick="changeCategory('Fun')">Fun</a></li>
+            <li id="Info"><a onclick="changeCategory('Info')">Info et Autres</a></li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Commandes</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Usage</th>
+                    <th scope="col">Shortcut</th>
+                </tr>
+            </thead>
+
+            <tbody id="Mod-table" class="active">
+                <tr>
+                    <th>ban</th>
+                    <td>Pour bannir un membre du serveur.</td>
+                    <td>&ban [@membre]<br>&ban [@member] [nombre de jour]<br>&ban [@member] [raison]<br>&ban [@member] [nombre de jour] [raison]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>checkWarn</th>
+                    <td>Pour voir quels membres ont reçu des avertissements et combien.</td>
+                    <td>&checkWarn</td>
+                    <td>&cw</td>
+                </tr>
+                <tr>
+                    <th>clear</th>
+                    <td>Pour supprimer un certain nombre de messages dans un channel.</td>
+                    <td>&clear<br>&clear [nombre de messages]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>kick</th>
+                    <td>Pour exclure un membre du serveur.</td>
+                    <td>&kick [@member]<br>&kick [@member] [raison]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>mute</th>
+                    <td>Pour muter un membre (ainsi il ne pourras plus envoyer de messages ou parler dans un vocal).</td>
+                    <td>&mute [@member]<br>&mute [@member] [temps en heure]</td>
+                    <td>&m</td>
+                </tr>
+                <tr>
+                    <th>unban</th>
+                    <td>Pour débannir un membre du serveur.</td>
+                    <td>&unban [id]<br>&unban [id] [raison]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>unmute</th>
+                    <td>Pour démuter un membre</td>
+                    <td>&unmute [@member]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>unwarn</th>
+                    <td> Pour enlever un avertissement à un membre.</td>
+                    <td>&unwarn [@member]<br>&unwarn [@member] [raison]</td>
+                    <td>&uw</td>
+                </tr>
+                <tr>
+                    <th>warn</th>
+                    <td>Pour donner un avertissement à un membre, au bout d'un certain nombre il sera banni (définissable avec <code>&setWarn</code>, par défaut 3).</td>
+                    <td>&warn [@member]<br>&warn [@member] [raison]</td>
+                    <td>&w</td>
+                </tr>
+            </tbody>
+
+            <tbody id="Role-table">
+                <tr>
+                    <th>addRole</th>
+                    <td>Pour ajouter un rôle à un membre.</td>
+                    <td>&addRole [@role] [@member]</td>
+                    <td>&addR</td>
+                </tr>
+                <tr>
+                    <th>autorole</th>
+                    <td>Pour ajouter un rôle automatiquement à chaque arrivant.</td>
+                    <td>&autorole [@role]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>createRole</th>
+                    <td>Pour créer un rôle. (à la place de <code>séparé ?</code> tu dois mettre soit true (= oui) soit false (= non))</td>
+                    <td>&createRole [nom]<br>&createRole [séparé ?] [nom]</td>
+                    <td>&createR</td>
+                </tr>
+                <tr>
+                    <th>deleteRole</th>
+                    <td>Pour supprimer un rôle.</td>
+                    <td>&deleteRole [@role]<br>&deleteRole [nom du role]</td>
+                    <td>&deleteR</td>
+                </tr>
+                <tr>
+                    <th>reactionRole</th>
+                    <td>Pour créer un message réaction-rôle. (réaction-rôle = clique sur une réaction pour recevoir un rôle)</td>
+                    <td>&reactionRole</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>removeRole</th>
+                    <td>Pour enlever un rôle à un membre.</td>
+                    <td>&removeRole [@role] [@member]</td>
+                    <td>&removeR</td>
+                </tr>
+            </tbody>
+
+            <tbody id="Serv-table">
+                <tr>
+                    <th>blockCommand</th>
+                    <td>Pour bloquer une commande de ce bot dans ce serveur.</td>
+                    <td>&blockCommand [nom de la commande]</td>
+                    <td>&bc</td>
+                </tr>
+                <tr>
+                    <th>poll</th>
+                    <td>Pour faire des sondages.</td>
+                    <td>&poll [question / message]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>setChannel</th>
+                    <td>Pour activer un des channels suivants:<br><code>join:</code> messages de bienvenue pour les membres qui rejoignent le serveur<br><code>leave:</code> messages d'au revoir pour les membres qui quittent le serveur<br><code>logs:</code> les logs du serveur<br>Pour en activer un, il faut envoyer dans le channel souhaité la commande avec <code>here</code><br>Et pour en désactiver un, il faut envoyer dans un channel la commande avec <code>stop</code></td>
+                    <td>&setChannel [channel à activer] [here / stop]<br>Exemple: <code>&setChannel join here</code></td>
+                    <td>&setc</td>
+                </tr>
+                <tr>
+                    <th>setGuildLanguage</th>
+                    <td>Pour changer la langue du serveur utilisé par le bot.</td>
+                    <td>&setGuildLanguage [fr / en]</td>
+                    <td>&setGuildl</td>
+                </tr>
+                <tr>
+                    <th>setPrefix</th>
+                    <td>Pour changer le prefixe du bot dans ce server.</td>
+                    <td>&setPrefix [nouveau prefix]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>setWarn</th>
+                    <td>Pour définir le nombre d'avertissements qu'un membre doit recevoir pour être banni.</td>
+                    <td>&setWarn [nombre d'avertissement]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>unblockCommand</th>
+                    <td>Pour débloquer une commande de ce bot dans ce serveur.</td>
+                    <td>&unblockCommand [nom de la commande]</td>
+                    <td>&ubc</td>
+                </tr>
+            </tbody>
+
+            <tbody id="Fun-table">
+                <tr>
+                    <th>gmn</th>
+                    <td>Il pense à un nombre et tu dois le trouver.</td>
+                    <td>&gmn</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>hangman</th>
+                    <td>Pour jouer au jeu du pendu.</td>
+                    <td>&hangman</td>
+                    <td>&hg</td>
+                </tr>
+                <tr>
+                    <th>randomSentence</th>
+                    <td>Envoie une phrase totalement aléatoire (et sûrement dépourvue de sens).</td>
+                    <td>&randomSentence</td>
+                    <td>&rs</td>
+                </tr>
+                <tr>
+                    <th>tictactoe</th>
+                    <td>Pour jouer au morpion (si tu ne mentionne personne, tu joueras contre le bot)</td>
+                    <td>&tictactoe</td>
+                    <td>&morpion</td>
+                </tr>
+                <tr>
+                    <th>weirdWord</th>
+                    <td>Il mélange un mot et tu dois retrouver le mot dans un temps limité. Pour jouer à plusieurs, faites <code>weirdWord multi</code>.</td>
+                    <td>&weirdWord<br>&weirdWord multi</td>
+                    <td>&ww</td>
+                </tr>
+            </tbody>
+
+            <tbody id="Info-table">
+                <tr>
+                    <th>botInfo</th>
+                    <td>Toutes les informations sur &Stunning.</td>
+                    <td>&botInfo</td>
+                    <td>&bot</td>
+                </tr>
+                <tr>
+                    <th>bug</th>
+                    <td>Pour prévenir le modérateur du bot d'un bug ou d'un problème concernant le bot.</td>
+                    <td>&bug [problème]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>help</th>
+                    <td>Pour avoir une liste de toute les commandes du bot (si tu précise le nom d'une commande, alors il t'enverra seulement les détail de celle-ci).</td>
+                    <td>&help<br>&help [commande]</td>
+                    <td>&h</td>
+                </tr>
+                <tr>
+                    <th>postIt</th>
+                    <td>Pour récupérer le texte que tu as enregistré avec la commande <code>setPostIt</code></td>
+                    <td>&postIt [texte / message]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>servInfo</th>
+                    <td>Toutes les informations sur le serveur sur lequel vous avez envoyez la commande.</td>
+                    <td>&servInfo</td>
+                    <td>&serv</td>
+                </tr>
+                <tr>
+                    <th>setPostIt</th>
+                    <td>Pour enregister un texte (et le récupérer avec <code>postIt</code>).</td>
+                    <td>&setPostIt</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>setUserLanguage</th>
+                    <td>Pour changer la langue du bot pour toi. </td>
+                    <td>&setUserLanguage [fr / en]</td>
+                    <td>&setUserl</td>
+                </tr>
+                <tr>
+                    <th>suggestion</th>
+                    <td>Pour transmettre au modérateur du bot une suggestion.</td>
+                    <td>&suggestion [votre suggestion]</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>userInfo</th>
+                    <td>Toutes les informations sur la personne mentionnée ou sur toi si personne ne l'est.</td>
+                    <td>&userInfo<br>&userInfo [@user]</td>
+                    <td>user</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        <script src="../../main.js"></script>
+
+    </body>
+</html>
