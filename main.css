@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    float: left;
+    display: inline-block;
     position: relative;
 }
 
@@ -75,12 +75,11 @@ h2 {
     font-weight: normal;
     text-decoration: underline;
     color: rgb(236, 235, 235);
-    margin-left: 40%;
+    text-align: center;    
 }
 
-img.slide {
-    margin-left: 25%;
-    margin-right: 25%;
+div.slide {
+    text-align: center;
 }
 
 .up-arrow, .down-arrow {
@@ -182,15 +181,16 @@ a {
 }
 
 .commands-category {
-    margin-left: 12%;
-    width: 69%;
     justify-content: center;
-    border-bottom-color: #c7c2c2be;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
     display: flex;
     list-style: none;
     margin-bottom: 50px;
+    /*margin-left: 12%;
+    width: 69%;
+    border-bottom-color: #c7c2c2be;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;*/
+    
 }
 
 .commands-category li {
@@ -200,7 +200,7 @@ a {
 
 .commands-category li a {
     color: rgba(97, 95, 95, 0.87);
-    font-size: 30px;
+    font-size: 230%;
     font-family: BlinkMacSystemFont,helvetica,arial,sans-serif;
     transition: all 0.2s ease-out;
 }
@@ -216,11 +216,11 @@ a {
 }
 
 table {
-    margin-left: 15%;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 66.6666%;
-    margin-bottom: 5%;
+    /*width: 66.6666%;
+    margin-bottom: 5%;*/
+    display: inline;
 }
 
 table td, th{
@@ -258,4 +258,9 @@ code {
     width: 64%;
     margin-left: 18%;
     height: auto;
+}
+
+.table {
+    text-align: center;
+    margin-bottom: 5%;
 }
