@@ -1,15 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    text-align: center;
+    margin-top: 0px;
     font-family: BlinkMacSystemFont,helvetica,arial,sans-serif;    
     line-height: 1.5;
     font-size: 1rem;
+    margin: 0;
+}
+
+p.bold {
+    font-weight: bold;
+    font-family: 'Martel Sans', sans-serif;
 }
 
 nav {
+    text-align: left;
     padding-top: 1px;
     background-color: rgb(12, 12, 12);
-    margin: 0px -8px;
+    margin-left: -8px;
     padding-bottom: 3px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 nav a {
@@ -44,7 +57,10 @@ nav ul::after {
     clear: both;
 }
 
-.sous {
+/* &Stunnings categories*/
+
+.sous{
+    border-radius: 3px;
     user-select: none;
     display: none;
     position: absolute;
@@ -78,26 +94,6 @@ h2 {
     text-align: center;    
 }
 
-div.slide {
-    text-align: center;
-}
-
-.up-arrow, .down-arrow {
-    background-color: rgb(77, 75, 75, 0.7);
-    font-size: 50px;
-    position: absolute;
-    margin-left: -53.5%;
-    transition: background-color 0.2s ease-out;
-}
-
-.up-arrow:hover, .down-arrow:hover {
-    background-color: rgb(77, 75, 75, 0.2);
-}
-
-.down-arrow {
-    margin-top: 23.9%;
-}
-
 p {
     font-size: 25px;
     font-family: cursive;
@@ -105,6 +101,7 @@ p {
 }
 
 .scratch-project {
+    text-align: center;
     background-color: rgba(62, 67, 75, 0.75);
     padding-bottom: 20px;
     margin-right: calc(40% - 575px);
@@ -127,9 +124,8 @@ a {
     color: #202224
 }
 
-.framed {
-    margin-top: -10px;
-    margin-left: 500px;
+.framed:hover {
+    border-color: #495685;
 }
 
 .framed, .framed .button {
@@ -161,7 +157,14 @@ a {
     background-color: #495685;
 }
 
+.framed {
+    transition: 0.4s border-color linear;
+    border-color: #4d5b8d40;
+}
+
 .bot-picture {
+    width: auto;
+    height: 10rem;
     display: block;
     margin-left: 150px;
 }
@@ -174,7 +177,6 @@ a {
 .secodary-title {
     color: rgb(13, 17, 22);
     text-align: center;
-    margin-left: -100px;
     font-size: 45px;
     font-family: Verdana, sans-serif;
     text-decoration: underline;
@@ -221,6 +223,11 @@ table {
     /*width: 66.6666%;
     margin-bottom: 5%;*/
     display: inline;
+    margin-left: unset;
+}
+
+table.swipe {
+    margin-left: -50%;
 }
 
 table td, th{
@@ -263,4 +270,143 @@ code {
 .table {
     text-align: center;
     margin-bottom: 5%;
+}
+
+/*div.contour-img {
+    max-width: 38vw;
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contour-img img{
+    margin-top: 3.5%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1rem;
+    border-color: rgba(109, 107, 107, 0.09);
+}
+
+.next, .previous {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+    font-size: 2rem;
+    user-select: none;
+    transition: background-color 0.3s linear;
+}
+
+.next {
+    margin-left: 42.6rem;
+}
+
+.next:hover, .previous:hover {
+    background-color: rgba(24, 24, 24, 0.534);
+}*/
+
+
+.img-container p {
+    font-weight: bold;
+    left: 6.5vw;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 18px;
+}
+
+.slide {
+    width: 100%;
+    height: 45vh;
+}
+
+div.contour-img {
+    position: inherit;
+    width: 100%;
+    height: 45vh;
+}
+
+div.contour-img > div {
+    display: none;
+    animation: appears 0.75s;
+}
+
+div.contour-img > div > p {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 2rem;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.91);
+    top: 15vh;
+    left: 33%;
+    animation: 0.75s left-to-rightLeft;
+}
+
+div.contour-img > div.active {
+    display: block;
+}
+
+.next, .previous {
+    cursor: pointer;
+    position: absolute;
+    top: 32vh;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+    font-size: 2rem;
+    user-select: none;
+    background-color: #2526257a;
+    transition: background-color 0.3s linear;
+}
+
+.next {
+    animation: left-to-rightRight 0.75s;
+    right: 0;
+}
+
+.next:hover, .previous:hover {
+    background-color: #2526259b;
+}
+
+div.left-to-right {
+    animation: left-to-rightMarginLeft 0.75s;
+}
+
+@keyframes left-to-rightRight {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes left-to-rightMarginLeft {
+    from {
+        margin-left: -100%
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+@keyframes left-to-rightLeft {
+    from {
+        left: -100%
+    }
+    to {
+        left: 33%;
+    }
+}
+
+@keyframes appears {
+    from {
+        opacity: 0.1
+    }
+    to {
+        opacity: 1
+    }
 }
