@@ -1,13 +1,14 @@
 var slide = 1;
 var onClick = false;
+const slideMax = {slide: 4, secSlide: 2}
 
-function changeSlide(n) {
-    let oldDiv = document.querySelector(`#slide${slide}`);
+function changeSlide(n, name) {
+    let oldDiv = document.querySelector(`#${name}${slide}`);
     onClick = true;
     slide += n;
-    if (slide < 1) slide = 3;
-    else if (slide >= 4) slide = 1;
-    const newDiv = document.querySelector(`#slide${slide}`);
+    if (slide < 1) slide = slideMax[name] - 1;
+    else if (slide >= slideMax[name]) slide = 1;
+    const newDiv = document.querySelector(`#${name}${slide}`);
 
     oldDiv.className = "";
     newDiv.className = "active";

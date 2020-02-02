@@ -16,6 +16,12 @@ p.bold {
     font-family: 'Martel Sans', sans-serif;
 }
 
+p.contrast {
+    background-color: #0303037a;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+
 nav {
     text-align: left;
     padding-top: 1px;
@@ -334,14 +340,33 @@ div.contour-img > div {
     animation: appears 0.75s;
 }
 
+div.contour-img img {
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+}
+
 div.contour-img > div > p {
     font-family: 'Martel Sans', sans-serif;
     font-size: 2rem;
     position: absolute;
     color: rgba(255, 255, 255, 0.91);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.contour-img > div > p > a {
+    color: rgb(174, 174, 174);
+    text-decoration: underline;
+}
+
+div.contour-img > div > p.slide-p-1 {
     top: 15vh;
-    left: 33%;
     animation: 0.75s left-to-rightLeft;
+}
+
+div.contour-img > div > p.slide-p-2 {
+    top: 63vh;
+    animation: 0.75s right-to-leftLeft;
 }
 
 div.contour-img > div.active {
@@ -351,7 +376,6 @@ div.contour-img > div.active {
 .next, .previous {
     cursor: pointer;
     position: absolute;
-    top: 32vh;
     margin-top: -22px;
     padding: 16px;
     color: rgb(216, 216, 216);
@@ -362,9 +386,25 @@ div.contour-img > div.active {
     transition: background-color 0.3s linear;
 }
 
+.slide-nb1 {
+    top: 32vh;
+}
+
+.slide-nb2 {
+    top: 75vh;
+}
+
 .next {
     animation: left-to-rightRight 0.75s;
     right: 0;
+}
+
+.next.slide-nb1 {
+    animation: left-to-rightRight 1s;
+}
+
+.next.slide-nb2 {
+    animation: right-to-leftRight 0.75s;
 }
 
 .next:hover, .previous:hover {
@@ -372,7 +412,11 @@ div.contour-img > div.active {
 }
 
 div.left-to-right {
-    animation: left-to-rightMarginLeft 0.75s;
+    animation: left-to-rightMarginLeft 1s;
+}
+
+div.right-to-left {
+    animation: right-to-leftMarginLeft 1s;
 }
 
 @keyframes left-to-rightRight {
@@ -394,11 +438,45 @@ div.left-to-right {
 }
 
 @keyframes left-to-rightLeft {
-    from {
+    0% {
         left: -100%
     }
+    90% {
+        left: 50%;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes right-to-leftRight {
+    from {
+        right: -100%;
+    }
     to {
-        left: 33%;
+        right: 0;
+    }
+}
+
+@keyframes right-to-leftMarginLeft {
+    from {
+        margin-left: 100%
+    }
+    to {
+        margin-left: 0;
+    }
+}
+
+
+@keyframes right-to-leftLeft {
+    0% {
+        left: 150%
+    }
+    90% {
+        left: 50%;
+    }
+    100% {
+        transform: translate(-50%, -50%);
     }
 }
 

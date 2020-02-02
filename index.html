@@ -29,19 +29,29 @@
         <div class="contour-img left-to-right">
             <div id="slide1" class="active">
                 <img src="images/slide1.jpg" class="slide">
-                <p>I'm a french developper known as Link D. Potter</p>
+                <p class="contrast slide-p-1">I'm a french developper known as Link D. Potter</p>
             </div>
             <div id="slide2">
                 <img src="images/slide2.jpg" class="slide">
-                <p class="bold">I code in JavaScript and learn the C++</p>
+                <p class="bold contrast slide-p-1">I code in JavaScript and learn the C++</p>
             </div>
             <div id="slide3">
                 <img src="images/slide3.jpg" class="slide">
-                <p class="bold">I began the programation with scratch at 12 years</p>
+                <p class="bold contrast slide-p-1">I began the programation with scratch at 12 years</p>
             </div>
-            <p class="previous" onclick="changeSlide(-1, true)"><</p>
-            <p class="next" onclick="changeSlide(1, true)">></p>
+            <p class="previous slide-nb1" onclick="changeSlide(-1, 'slide')"><</p>
+            <p class="next slide-nb1" onclick="changeSlide(1, 'slide')">></p>
         </div>
+
+        <div class="contour-img right-to-left">
+            <div id="secSlide1" class="active">
+                <img src="images/secSlide1.png" class="slide">
+                <p class="contrast slide-p-2"><a href="https://scratch.mit.edu/" target="_blank">Scratch</a> is a block-based visual programming language and online community targeted primarily at children</p>
+            </div>
+            <p class="previous slide-nb2" onclick="changeSlide(-1, 'secSlide')"><</p>
+            <p class="next slide-nb2" onclick="changeSlide(1, 'secSlide')">></p>
+        </div>
+
         <!--<div class="contour-img">
             <div class="img-container">
                 <img src="images/slide1.jpg" alt="slide" class="slide">
